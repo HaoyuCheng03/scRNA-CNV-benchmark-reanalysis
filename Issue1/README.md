@@ -20,4 +20,4 @@ The continuous CNV signals are processed as follows:
 
 Thus, the AneuFinder `z` values and CopyKit `bulk` values are scaled CNV signals used for the karyogram and Pearson-correlation analyses. 
 
-The resulting `<sampleID>_combined_methods_ratio.rds` files are used as input for the plotting and comparison scripts above.
+The resulting `<sampleID>_combined_gt.rds` files (stored in SampleID_combined_gt.zip) are used as input for plotting Figure 1a and `<sampleID>_combined_methods_ratio.rds` files are used as input for plotting Figure 1b and the comparison scripts above.
