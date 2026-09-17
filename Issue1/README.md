@@ -11,4 +11,12 @@ For each sample, the `<sampleID>_combined_methods_ratio.rds` file is generated b
 - **`Aneufinder_Karyotyping`** – results stored in `scDNA_Aneufinder/bin100kb_cont_w_ploidy.zip`
 - **`CopyKit_Karyotyping`** – results stored in `scDNA_CopyKit/bin100kb_cont_w_ploidy.zip`
 
+The continuous CNV signals are processed as follows: 
+
+1. **`Aneufinder_Schmid_R`**: diploid thresholds → loss/neutral/gain states (1/2/3) → pseudobulk average across cells → center at 2 and scale by SD (`z` column).
+2. **`Aneufinder_Karyotyping`**: sample-specific ploidy thresholds → loss/neutral/gain states (1/2/3) → pseudobulk average across cells → center at 2 and scale by SD (`z` column).
+3. **`CopyKit_Karyotyping`**: continuous segment ratios (relative CNV signal; neutral ≈ 1) → pseudobulk average across cells → multiply by sample-specific karyotyping ploidy → aggregate into 100-kb bins → center at the sample-specific ploidy and scale by SD (`bulk` column).
+
+Thus, the AneuFinder `z` values and CopyKit `bulk` values are scaled CNV signals used for the karyogram and Pearson-correlation analyses. 
+
 The resulting `<sampleID>_combined_methods_ratio.rds` files are used as input for the plotting and comparison scripts above.
