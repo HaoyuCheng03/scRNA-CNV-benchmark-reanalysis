@@ -10,6 +10,7 @@ For each sample, the `<sampleID>_combined_methods_ratio.rds` file is generated b
 - **`Aneufinder_Schmid_R`** – results stored in `scDNA_Aneufinder/bin100kb_cont.zip`
 - **`Aneufinder_Karyotyping`** – results stored in `scDNA_Aneufinder/bin100kb_cont_w_ploidy.zip`
 - **`CopyKit_Karyotyping`** – results stored in `scDNA_CopyKit/bin100kb_cont_w_ploidy.zip`
+  
 
 The continuous CNV signals are processed as follows: 
 
